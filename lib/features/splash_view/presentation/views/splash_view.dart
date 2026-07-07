@@ -1,22 +1,25 @@
 import 'package:flutter/material.dart';
 import 'package:wajed/const.dart';
+import 'package:wajed/features/splash_view/presentation/views/widgets/splash_view_body.dart';
 
 class SplashView extends StatelessWidget {
   const SplashView({super.key});
 
   @override
   Widget build(BuildContext context) {
-    return Container(
-      width: double.infinity,
-      height: double.infinity,
-      decoration: const BoxDecoration(
-        gradient: LinearGradient(
-          begin: Alignment.topCenter,
-          end: Alignment.bottomCenter,
-          colors: [
-            kbeginSplashView,
-            kendSplashView,
-          ],
+    return Scaffold(
+      body: Container(
+        width: double.infinity,
+        height: double.infinity,
+        decoration: const BoxDecoration(
+          gradient: LinearGradient(
+            begin: Alignment.topCenter,
+            end: Alignment.bottomCenter,
+            colors: [kbeginSplashView, kendSplashView],
+          ),
+        ),
+        child: Center(
+          child: SplashViewBody(),
         ),
       ),
     );

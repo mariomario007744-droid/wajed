@@ -1,4 +1,4 @@
-import 'dart:ui';
+import 'package:flutter/material.dart';
 
 const kbeginSplashView = Color(0xFF169C81);
 const kendSplashView = Color(0xFF117C67);
