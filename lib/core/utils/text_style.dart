@@ -1,0 +1,16 @@
+import 'package:flutter/material.dart';
+
+abstract class Styles {
+  static const fontSize16 = TextStyle(
+    fontFamily: 'Open Sans',
+    fontSize: 16,
+    fontWeight: FontWeight.w700,
+  );
+
+  static const fontSize24 = TextStyle(
+    fontFamily: 'Open Sans',
+    fontSize: 24,
+    fontWeight: FontWeight.w700,
+    letterSpacing: -0.56,
+  );
+}
