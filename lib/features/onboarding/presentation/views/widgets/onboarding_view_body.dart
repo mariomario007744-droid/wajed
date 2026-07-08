@@ -5,8 +5,12 @@ import 'package:wajed/features/onboarding/presentation/views/widgets/subtitle_vi
 import 'package:wajed/features/onboarding/presentation/views/widgets/title_view.dart';
 
 class OnboardingViewBody extends StatelessWidget {
-  const OnboardingViewBody({super.key});
-
+  const OnboardingViewBody({required this.activeIndex, required this.title, required this.subtitle, required this.buttonText, required this.onPressed});
+  final int activeIndex;
+  final String title;
+  final String subtitle;
+  final String buttonText;
+  final VoidCallback onPressed;
   @override
   Widget build(BuildContext context) {
     return Container(
@@ -14,16 +18,16 @@ class OnboardingViewBody extends StatelessWidget {
       child: Column(
         children: [
           const  SizedBox(height: 20),
-          const  OnboardingPageIndicator(activeIndex: 0),
+          OnboardingPageIndicator(activeIndex: activeIndex),
           const  SizedBox(height: 16),
-          const  TitleView(text: 'Lost something? Found something? We’ll help you.'),
+          TitleView(text: title),
           const  SizedBox(height: 20),
-          const  SubtitleView(
+          SubtitleView(
             text:
-                'Our app makes it simple to report lost items and share found ones so owners and finders can safely connect.',
+              subtitle  ,
           ),
           SizedBox(height: 20),
-          Padding(padding: const EdgeInsets.all(16.0), child: CustomButton(text: 'Next', onPressed: () {})),
+          Padding(padding: const EdgeInsets.all(16.0), child: CustomButton(text: buttonText, onPressed: onPressed)),
         ],
       ),
     );
