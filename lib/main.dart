@@ -5,21 +5,15 @@ void main() {
   runApp(const Wajed());
 }
 
-class Wajed extends StatefulWidget {
+class Wajed extends StatelessWidget {
   const Wajed({super.key});
 
   @override
-  State<Wajed> createState() => _WajedState();
-}
-
-class _WajedState extends State<Wajed> {
-  initState() {
-    super.initState();
-    
-  }
-  @override
   Widget build(BuildContext context) {
     return MaterialApp.router(
+      theme: ThemeData(
+        fontFamily: 'Open Sans',
+      ),
       debugShowCheckedModeBanner: false,
       routerConfig: AppRoutes.router,
     );

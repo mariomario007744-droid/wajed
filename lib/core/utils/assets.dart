@@ -3,4 +3,5 @@ abstract class AssetsData {
   static const String onboardingFirstPhoto = 'assets/images/iPhone 16.png';
   static const String onboardingSecondPhoto = 'assets/images/iPhone 15.png';
   static const String onboardingThirdPhoto = 'assets/images/iPhone_15.png';
+  static const String greenLogo = 'assets/images/green_logo.png';
 }

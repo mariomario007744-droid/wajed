@@ -1,4 +1,12 @@
 import 'package:flutter/material.dart';
+import 'package:wajed/core/utils/assets.dart';
+import 'package:wajed/core/widgets/custom_button.dart';
+import 'package:wajed/core/widgets/logo.dart';
+import 'package:wajed/features/authentication/presentation/widgets/custom_button_without_background.dart';
+import 'package:wajed/features/authentication/presentation/widgets/facebook_auth_button.dart';
+import 'package:wajed/features/authentication/presentation/widgets/google_auth_button.dart';
+import 'package:wajed/features/authentication/presentation/widgets/title_view.dart';
+import 'package:wajed/features/onboarding/presentation/views/widgets/subtitle_view.dart';
 
 class GetStartedView extends StatelessWidget {
   static const String routeName = '/get_started_view';
@@ -6,6 +14,53 @@ class GetStartedView extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return const Placeholder();
+    return SafeArea(
+      child: Scaffold(
+        body: Padding(
+          padding: const EdgeInsets.all(8.0),
+          child: ListView(
+            children: [
+              Logo(logo: AssetsData.greenLogo),
+              TitleView(text: 'Welcome to Wajed App'),
+              SizedBox(height: 8),
+              SubtitleView(
+                text:
+                    'Quickly report lost items, share found ones, and reconnect with their owners — safely and easily.',
+              ),
+              SizedBox(height: MediaQuery.of(context).size.height * 0.02),
+              Row(
+                mainAxisAlignment: MainAxisAlignment.center,
+                children: [
+                  Expanded(
+                    child: CustomButton(
+                      text: 'Create Account',
+                      onPressed: () {},
+                    ),
+                  ),
+                  SizedBox(width: 16),
+                  Expanded(
+                    child: CustomButtonWithoutBackground(
+                      text: 'Log In',
+                      onPressed: () {},
+                    ),
+                  ),
+                ],
+              ),
+              SizedBox(height: MediaQuery.of(context).size.height * 0.02),
+              SubtitleView(text: 'Or Continue with'),
+              SizedBox(height: MediaQuery.of(context).size.height * 0.02),
+              Row(
+                mainAxisAlignment: MainAxisAlignment.center,
+                children: [
+                  GoogleAuthButton(),
+                  SizedBox(width: 16),
+                  FacebookAuthButton(),
+                ],
+              ),
+            ],
+          ),
+        ),
+      ),
+    );
   }
 }
