@@ -1,7 +1,9 @@
 import 'package:flutter/material.dart';
+import 'package:go_router/go_router.dart';
 import 'package:wajed/core/utils/assets.dart';
 import 'package:wajed/core/widgets/custom_button.dart';
 import 'package:wajed/core/widgets/logo.dart';
+import 'package:wajed/features/authentication/presentation/views/create_acount_view.dart';
 import 'package:wajed/features/authentication/presentation/widgets/custom_button_without_background.dart';
 import 'package:wajed/features/authentication/presentation/widgets/facebook_auth_button.dart';
 import 'package:wajed/features/authentication/presentation/widgets/google_auth_button.dart';
@@ -17,7 +19,7 @@ class GetStartedView extends StatelessWidget {
     return SafeArea(
       child: Scaffold(
         body: Padding(
-          padding: const EdgeInsets.all(8.0),
+          padding: const EdgeInsets.all(16.0),
           child: ListView(
             children: [
               Logo(logo: AssetsData.greenLogo),
@@ -34,7 +36,9 @@ class GetStartedView extends StatelessWidget {
                   Expanded(
                     child: CustomButton(
                       text: 'Create Account',
-                      onPressed: () {},
+                      onPressed: () {
+                        context.push(CreateAcountView.routeName);
+                      },
                     ),
                   ),
                   SizedBox(width: 16),

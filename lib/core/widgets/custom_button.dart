@@ -5,7 +5,7 @@ import 'package:wajed/core/utils/text_style.dart';
 class CustomButton extends StatelessWidget {
   final String text;
   final void Function()? onPressed;
-  CustomButton({required this.text, required this.onPressed,});
+  CustomButton({required this.text, required this.onPressed});
 
   @override
   Widget build(BuildContext context) {
@@ -19,7 +19,7 @@ class CustomButton extends StatelessWidget {
       child: Row(
         mainAxisAlignment: MainAxisAlignment.center,
         children: [
-          Text(text, style: Styles.fontSize16.copyWith(color: Colors.white)),
+          Text(text, style: Styles.fontSize14.copyWith(color: Colors.white)),
         ],
       ),
     );

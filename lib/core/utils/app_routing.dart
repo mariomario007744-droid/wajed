@@ -1,4 +1,5 @@
 import 'package:go_router/go_router.dart';
+import 'package:wajed/features/authentication/presentation/views/create_acount_view.dart';
 import 'package:wajed/features/authentication/presentation/views/get_started_view.dart';
 import 'package:wajed/features/onboarding/presentation/views/onboarding_second_view.dart';
 import 'package:wajed/features/onboarding/presentation/views/onboarding_third_view.dart';
@@ -24,6 +25,10 @@ abstract class AppRoutes {
       GoRoute(
         path: GetStartedView.routeName,
         builder: (context, state) => GetStartedView(),
+      ),
+            GoRoute(
+        path: CreateAcountView.routeName,
+        builder: (context, state) => CreateAcountView(),
       ),
     ],
   );

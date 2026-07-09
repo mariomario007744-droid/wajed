@@ -4,9 +4,7 @@ import 'package:wajed/core/utils/text_style.dart';
 import 'package:wajed/features/authentication/presentation/views/get_started_view.dart';
 
 class SkipButtonOnboarding extends StatelessWidget {
-  const SkipButtonOnboarding({
-    super.key,
-  });
+  const SkipButtonOnboarding({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -15,7 +13,7 @@ class SkipButtonOnboarding extends StatelessWidget {
       child: GestureDetector(
         child: Text(
           'SKIP',
-          style: Styles.fontSize16,
+          style: Styles.fontSize14,
           textAlign: TextAlign.right,
         ),
         onTap: () => navigationLogic(context),
@@ -23,7 +21,7 @@ class SkipButtonOnboarding extends StatelessWidget {
     );
   }
 
-      void navigationLogic(BuildContext context) {
+  void navigationLogic(BuildContext context) {
     context.go(GetStartedView.routeName);
   }
 }
