@@ -1,18 +1,17 @@
 import 'package:flutter/material.dart';
 import 'package:wajed/const.dart';
 
-class CustomFormField extends StatelessWidget {
-  const CustomFormField({super.key,required this.icon});
+class CustomTextFormField extends StatelessWidget {
+  const CustomTextFormField({super.key, required this.icon,required this.hintText});
   final Icon icon;
+  final String hintText;
   @override
   Widget build(BuildContext context) {
     return TextFormField(
       decoration: InputDecoration(
         prefixIcon: Icon(icon.icon, color: kGreyColor, size: 24),
-        hint: Text('Enter your username'),
-        border: OutlineInputBorder(
-          borderRadius: BorderRadius.circular(16.0),
-        ),
+        hint: Text(hintText),
+        border: OutlineInputBorder(borderRadius: BorderRadius.circular(16.0)),
       ),
     );
   }

@@ -3,12 +3,13 @@ import 'package:go_router/go_router.dart';
 import 'package:wajed/core/utils/assets.dart';
 import 'package:wajed/core/widgets/custom_button.dart';
 import 'package:wajed/core/widgets/logo.dart';
-import 'package:wajed/features/authentication/presentation/views/create_acount_view.dart';
-import 'package:wajed/features/authentication/presentation/widgets/custom_button_without_background.dart';
-import 'package:wajed/features/authentication/presentation/widgets/facebook_auth_button.dart';
-import 'package:wajed/features/authentication/presentation/widgets/google_auth_button.dart';
-import 'package:wajed/features/authentication/presentation/widgets/title_view.dart';
+import 'package:wajed/features/authentication/presentation/views/create_account_view.dart';
+import 'package:wajed/features/authentication/presentation/views/log_in_view.dart';
+import 'package:wajed/features/authentication/presentation/views/widgets/custom_button_without_background.dart';
+import 'package:wajed/features/authentication/presentation/views/widgets/facebook_auth_button.dart';
+import 'package:wajed/features/authentication/presentation/views/widgets/google_auth_button.dart';
 import 'package:wajed/features/onboarding/presentation/views/widgets/subtitle_view.dart';
+import 'package:wajed/features/onboarding/presentation/views/widgets/title_view.dart';
 
 class GetStartedView extends StatelessWidget {
   static const String routeName = '/get_started_view';
@@ -25,7 +26,8 @@ class GetStartedView extends StatelessWidget {
               Logo(logo: AssetsData.greenLogo),
               Align(
                 alignment: Alignment.center,
-                child: TitleView(text: 'Welcome to Wajed App')),
+                child: TitleView(text: 'Welcome to Wajed App'),
+              ),
               SizedBox(height: 8),
               SubtitleView(
                 text:
@@ -38,16 +40,14 @@ class GetStartedView extends StatelessWidget {
                   Expanded(
                     child: CustomButton(
                       text: 'Create Account',
-                      onPressed: () {
-                        context.push(CreateAcountView.routeName);
-                      },
+                      onPressed: () => navigateToCreateAccount(context),
                     ),
                   ),
                   SizedBox(width: 16),
                   Expanded(
                     child: CustomButtonWithoutBackground(
                       text: 'Log In',
-                      onPressed: () {},
+                      onPressed: () => navigateToLogIn(context),
                     ),
                   ),
                 ],
@@ -68,5 +68,13 @@ class GetStartedView extends StatelessWidget {
         ),
       ),
     );
+  }
+
+  navigateToCreateAccount(BuildContext context) {
+    context.push(CreateAccountView.routeName);
+  }
+
+  navigateToLogIn(BuildContext context) {
+    context.push(LogInView.routeName);
   }
 }

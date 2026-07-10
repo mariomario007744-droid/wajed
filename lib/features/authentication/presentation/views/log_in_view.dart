@@ -1,10 +1,10 @@
 import 'package:flutter/material.dart';
-import 'package:wajed/features/authentication/presentation/widgets/create_acount_view_body.dart';
-import 'package:wajed/features/authentication/presentation/widgets/custom_app_bar_auth.dart';
+import 'package:wajed/features/authentication/presentation/views/widgets/custom_app_bar_auth.dart';
+import 'package:wajed/features/authentication/presentation/views/widgets/log_in_view_body.dart';
 
-class CreateAcountView extends StatelessWidget {
-  const CreateAcountView({super.key});
-  static const String routeName = '/create_account_view';
+class LogInView extends StatelessWidget {
+  const LogInView({super.key});
+  static const String routeName = '/log_in_view';
 
   @override
   Widget build(BuildContext context) {
@@ -16,7 +16,7 @@ class CreateAcountView extends StatelessWidget {
             Expanded(
               child: Padding(
                 padding: const EdgeInsets.only(left: 16.0, right: 16.0, bottom: 16.0),
-                child: CreateAcountViewBody(),
+                child: LogInViewBody(),
               ),
             ),
           ],

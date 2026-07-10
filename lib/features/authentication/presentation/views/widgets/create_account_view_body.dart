@@ -3,13 +3,14 @@ import 'package:go_router/go_router.dart';
 import 'package:icons_plus/icons_plus.dart';
 import 'package:wajed/core/widgets/custom_button.dart';
 import 'package:wajed/features/authentication/presentation/views/add_location_view.dart';
-import 'package:wajed/features/authentication/presentation/widgets/custom_field_label_text.dart';
-import 'package:wajed/features/authentication/presentation/widgets/custom_form_field.dart';
-import 'package:wajed/features/authentication/presentation/widgets/subtitle_view.dart';
-import 'package:wajed/features/authentication/presentation/widgets/title_view.dart';
+import 'package:wajed/features/authentication/presentation/views/widgets/custom_field_label_text.dart';
+import 'package:wajed/features/authentication/presentation/views/widgets/custom_password_form_field.dart';
+import 'package:wajed/features/authentication/presentation/views/widgets/custom_text_form_field.dart';
+import 'package:wajed/features/onboarding/presentation/views/widgets/subtitle_view.dart';
+import 'package:wajed/features/onboarding/presentation/views/widgets/title_view.dart';
 
-class CreateAcountViewBody extends StatelessWidget {
-  CreateAcountViewBody({super.key});
+class CreateAccountViewBody extends StatelessWidget {
+  CreateAccountViewBody({super.key});
   final GlobalKey<FormState> _formKey = GlobalKey<FormState>();
   @override
   Widget build(BuildContext context) {
@@ -30,23 +31,38 @@ class CreateAcountViewBody extends StatelessWidget {
           const SizedBox(height: 16),
           CustomFieldLabelText(text: 'User Name'),
           const SizedBox(height: 8),
-          CustomFormField(icon: Icon(Bootstrap.person)),
+          CustomTextFormField(
+            icon: Icon(Bootstrap.person),
+            hintText: 'Enter your user name',
+          ),
           const SizedBox(height: 16),
           CustomFieldLabelText(text: 'Email'),
           const SizedBox(height: 8),
-          CustomFormField(icon: Icon(Bootstrap.envelope_at)),
+          CustomTextFormField(
+            icon: Icon(Bootstrap.envelope_at),
+            hintText: 'Enter your email',
+          ),
           const SizedBox(height: 16),
           CustomFieldLabelText(text: 'Password'),
           const SizedBox(height: 8),
-          CustomFormField(icon: Icon(Icons.lock_open_outlined)),
+          CustomPasswordFormField(
+            icon: Icon(Icons.lock_open_outlined),
+            hintText: 'Enter your password',
+          ),
           const SizedBox(height: 16),
           CustomFieldLabelText(text: 'Confirm Password'),
           const SizedBox(height: 8),
-          CustomFormField(icon: Icon(Icons.lock_open_outlined)),
+          CustomPasswordFormField(
+            icon: Icon(Icons.lock_open_outlined),
+            hintText: 'Confirm your password',
+          ),
           const SizedBox(height: 16),
-          CustomButton(text: 'Create Account', onPressed: () {
-            context.push(AddLocationView.routeName);
-          }),
+          CustomButton(
+            text: 'Create Account',
+            onPressed: () {
+              context.push(AddLocationView.routeName);
+            },
+          ),
         ],
       ),
     );
