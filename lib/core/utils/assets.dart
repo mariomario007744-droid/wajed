@@ -4,4 +4,6 @@ abstract class AssetsData {
   static const String onboardingSecondPhoto = 'assets/images/iPhone 15.png';
   static const String onboardingThirdPhoto = 'assets/images/iPhone_15.png';
   static const String greenLogo = 'assets/images/green_logo.png';
+  static const String mapsSearchIcon = 'assets/images/maps-search.svg';
+
 }

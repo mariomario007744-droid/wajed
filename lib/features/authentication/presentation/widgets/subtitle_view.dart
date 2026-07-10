@@ -14,7 +14,6 @@ class SubtitleView extends StatelessWidget {
         color: kGreyColor,
         fontWeight: FontWeight.w400,
       ),
-      textAlign: TextAlign.center,
     );
   }
 }

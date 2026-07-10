@@ -23,7 +23,9 @@ class GetStartedView extends StatelessWidget {
           child: ListView(
             children: [
               Logo(logo: AssetsData.greenLogo),
-              TitleView(text: 'Welcome to Wajed App'),
+              Align(
+                alignment: Alignment.center,
+                child: TitleView(text: 'Welcome to Wajed App')),
               SizedBox(height: 8),
               SubtitleView(
                 text:

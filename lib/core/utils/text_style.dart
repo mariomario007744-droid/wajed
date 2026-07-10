@@ -16,4 +16,9 @@ abstract class Styles {
     fontWeight: FontWeight.w700,
     height: 1.5,
   );
+    static const fontSize12 = TextStyle(
+    fontSize: 12,
+    fontWeight: FontWeight.w400,
+    height: 1.5,
+  );
 }

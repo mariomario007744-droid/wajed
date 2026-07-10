@@ -12,10 +12,10 @@ class CreateAcountView extends StatelessWidget {
       child: Scaffold(
         body: Column(
           children: [
-            CustomAppBarAuth(),
+            const CustomAppBarAuth(),
             Expanded(
               child: Padding(
-                padding: const EdgeInsets.all(16.0),
+                padding: const EdgeInsets.only(left: 16.0, right: 16.0, bottom: 16.0),
                 child: CreateAcountViewBody(),
               ),
             ),

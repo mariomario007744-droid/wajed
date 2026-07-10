@@ -6,23 +6,14 @@ class CustomFormField extends StatelessWidget {
   final Icon icon;
   @override
   Widget build(BuildContext context) {
-    return FormField(
-      builder: (context) {
-        return TextFormField(
-          decoration: InputDecoration(
-            hint: Row(
-              children: [
-                Icon(icon.icon, color: kGreyColor, size: 24),
-                SizedBox(width: 8),
-                Text('Enter your username'),
-              ],
-            ),
-            border: OutlineInputBorder(
-              borderRadius: BorderRadius.circular(16.0),
-            ),
-          ),
-        );
-      },
+    return TextFormField(
+      decoration: InputDecoration(
+        prefixIcon: Icon(icon.icon, color: kGreyColor, size: 24),
+        hint: Text('Enter your username'),
+        border: OutlineInputBorder(
+          borderRadius: BorderRadius.circular(16.0),
+        ),
+      ),
     );
   }
 }

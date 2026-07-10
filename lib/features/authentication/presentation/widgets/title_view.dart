@@ -13,7 +13,6 @@ class TitleView extends StatelessWidget {
     return Text(
       text,
       style: Styles.fontSize24,
-      textAlign: TextAlign.center,
     );
   }
 }
