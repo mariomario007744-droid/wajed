@@ -1,5 +1,6 @@
 import 'package:go_router/go_router.dart';
 import 'package:wajed/features/authentication/presentation/views/add_location_view.dart';
+import 'package:wajed/features/authentication/presentation/views/confirm_otp_code_view.dart';
 import 'package:wajed/features/authentication/presentation/views/create_account_view.dart';
 import 'package:wajed/features/authentication/presentation/views/get_started_view.dart';
 import 'package:wajed/features/authentication/presentation/views/log_in_view.dart';
@@ -39,6 +40,10 @@ abstract class AppRoutes {
       GoRoute(
         path: LogInView.routeName,
         builder: (context, state) => LogInView(),
+      ),
+      GoRoute(
+        path: ConfirmOTPCodeView.routeName,
+        builder: (context, state) => ConfirmOTPCodeView(),
       ),
     ],
   );
