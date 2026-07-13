@@ -4,6 +4,7 @@ import 'package:wajed/features/authentication/presentation/views/confirm_otp_cod
 import 'package:wajed/features/authentication/presentation/views/create_account_view.dart';
 import 'package:wajed/features/authentication/presentation/views/get_started_view.dart';
 import 'package:wajed/features/authentication/presentation/views/log_in_view.dart';
+import 'package:wajed/features/home/presentation/views/home_view.dart';
 import 'package:wajed/features/onboarding/presentation/views/onboarding_second_view.dart';
 import 'package:wajed/features/onboarding/presentation/views/onboarding_third_view.dart';
 import 'package:wajed/features/splash_view/presentation/views/splash_view.dart';
@@ -44,6 +45,10 @@ abstract class AppRoutes {
       GoRoute(
         path: ConfirmOTPCodeView.routeName,
         builder: (context, state) => ConfirmOTPCodeView(),
+      ),
+      GoRoute(
+        path: HomeView.routeName,
+        builder: (context, state) => HomeView(),
       ),
     ],
   );

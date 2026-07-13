@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:go_router/go_router.dart';
 import 'package:icons_plus/icons_plus.dart';
 import 'package:wajed/core/widgets/custom_button.dart';
 import 'package:wajed/features/authentication/presentation/views/widgets/custom_field_label_text.dart';
@@ -6,6 +7,7 @@ import 'package:wajed/features/authentication/presentation/views/widgets/custom_
 import 'package:wajed/features/authentication/presentation/views/widgets/custom_text_form_field.dart';
 import 'package:wajed/features/authentication/presentation/views/widgets/facebook_auth_button.dart';
 import 'package:wajed/features/authentication/presentation/views/widgets/google_auth_button.dart';
+import 'package:wajed/features/home/presentation/views/home_view.dart';
 import 'package:wajed/features/onboarding/presentation/views/widgets/subtitle_view.dart';
 import 'package:wajed/features/onboarding/presentation/views/widgets/title_view.dart';
 
@@ -31,16 +33,21 @@ class LogInViewBody extends StatelessWidget {
           const SizedBox(height: 16),
           CustomFieldLabelText(text: 'Email'),
           const SizedBox(height: 8),
-          CustomTextFormField(icon: Icon(Bootstrap.envelope_at),hintText: 'Enter your email',),
+          CustomTextFormField(
+            icon: Icon(Bootstrap.envelope_at),
+            hintText: 'Enter your email',
+          ),
           const SizedBox(height: 16),
           CustomFieldLabelText(text: 'Password'),
           const SizedBox(height: 8),
-          CustomPasswordFormField(icon: Icon(Icons.lock_open_outlined),hintText: 'Enter your password',),
+          CustomPasswordFormField(
+            icon: Icon(Icons.lock_open_outlined),
+            hintText: 'Enter your password',
+          ),
           const SizedBox(height: 16),
           CustomButton(
             text: 'Log In',
-            onPressed: () {
-            },
+            onPressed: () => navigateToHomeView(context: context),
           ),
           SizedBox(height: MediaQuery.of(context).size.height * 0.02),
           SubtitleView(text: 'Or Continue with'),
@@ -58,4 +65,7 @@ class LogInViewBody extends StatelessWidget {
     );
   }
 
+  navigateToHomeView({required BuildContext context}) {
+    context.go(HomeView.routeName);
+  }
 }

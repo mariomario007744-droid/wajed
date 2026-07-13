@@ -1,9 +1,11 @@
 import 'package:flutter/material.dart';
+import 'package:go_router/go_router.dart';
 import 'package:wajed/core/widgets/custom_button.dart';
 import 'package:wajed/features/authentication/presentation/views/widgets/Custom_otp_widget.dart';
 import 'package:wajed/features/authentication/presentation/views/widgets/custom_app_bar_auth.dart';
 import 'package:wajed/features/authentication/presentation/views/widgets/subtitle_view.dart';
 import 'package:wajed/features/authentication/presentation/views/widgets/title_view.dart';
+import 'package:wajed/features/home/presentation/views/home_view.dart';
 
 class ConfirmOTPCodeView extends StatelessWidget {
   const ConfirmOTPCodeView({super.key});
@@ -34,7 +36,10 @@ class ConfirmOTPCodeView extends StatelessWidget {
                     const SizedBox(height: 16),
                     CustomOTPWidget(),
                     const SizedBox(height: 16),
-                    CustomButton(text: 'Confirm', onPressed: () {}),
+                    CustomButton(
+                      text: 'Confirm',
+                      onPressed: () => navigateToHomeView(context: context),
+                    ),
                   ],
                 ),
               ),
@@ -43,5 +48,9 @@ class ConfirmOTPCodeView extends StatelessWidget {
         ),
       ),
     );
+  }
+
+  navigateToHomeView({required BuildContext context}) {
+    context.go(HomeView.routeName);
   }
 }
