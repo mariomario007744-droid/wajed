@@ -6,9 +6,9 @@ class AddLocationView extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return SafeArea(
-      child: Scaffold(
-        body: Stack(
+    return Scaffold(
+      body: SafeArea(
+        child: Stack(
           children: [
             Positioned.fill(child: Image.asset("assets/images/Location confirmation.png")),
             AddLocationViewBody(),
