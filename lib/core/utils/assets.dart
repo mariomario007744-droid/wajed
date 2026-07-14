@@ -7,4 +7,7 @@ abstract class AssetsData {
   static const String mapsSearchIcon = 'assets/images/maps-search.svg';
   static const String notificationsIcon = 'assets/images/svgviewer-output.svg';
   static const String searchIcon = 'assets/images/search-01.svg';
+  static const String contactIcon = 'assets/images/contact-02.svg';
+  static const String commentIcon = 'assets/images/comment-01.svg';
+  static const String likeIcon = 'assets/images/thumbs-up.svg';
 }
