@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:wajed/core/widgets/posts/found_post_card/found_post_card.dart';
+import 'package:wajed/core/widgets/posts/lost_post_card/lost_post_card.dart';
 import 'package:wajed/features/home/presentation/views/widget/home_app_bar.dart';
 
 class HomeView extends StatelessWidget {
@@ -16,7 +16,14 @@ class HomeView extends StatelessWidget {
           child: Column(
             children: [
               SizedBox(height: 50, child: HomeAppBar()),
-              FoundPostCard(),
+              Expanded(
+                child: ListView.builder(
+                  itemCount: 6,
+                  itemBuilder: (context, index) {
+                    return  LostPostCard();
+                  },
+                ),
+              ),
             ],
           ),
         ),

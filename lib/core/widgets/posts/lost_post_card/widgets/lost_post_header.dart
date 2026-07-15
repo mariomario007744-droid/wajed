@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:wajed/core/utils/text_style.dart';
 
-class HeaderSection extends StatelessWidget {
-  const HeaderSection({
+class LostPostHeader extends StatelessWidget {
+  const LostPostHeader({
     super.key,
     required this.avatar,
     required this.userName,
@@ -16,9 +16,7 @@ class HeaderSection extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return ListTile(
-      visualDensity: VisualDensity(
-        vertical: -4
-      ),
+      visualDensity: VisualDensity(vertical: -4),
       contentPadding: EdgeInsets.zero,
       leading: CircleAvatar(
         radius: 22,
@@ -39,13 +37,13 @@ class HeaderSection extends StatelessWidget {
             width: 8,
             height: 8,
             decoration: BoxDecoration(
-              color: Color(0xFF16A34A),
+              color: Color(0xFFD92D20),
               shape: BoxShape.circle,
             ),
           ),
           const SizedBox(width: 4),
           Text(
-            'Found',
+            'Lost',
             style: Styles.fontSize12.copyWith(color: Colors.grey[600]),
           ),
         ],

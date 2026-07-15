@@ -1,10 +1,11 @@
 import 'package:flutter/material.dart';
-import 'package:wajed/core/widgets/posts/found_post_card/widgets/found_post_header.dart';
+import 'package:wajed/core/widgets/posts/lost_post_card/widgets/financial_reward_container.dart';
+import 'package:wajed/core/widgets/posts/lost_post_card/widgets/lost_post_header.dart';
 import 'package:wajed/core/widgets/posts/shared_components/images_container.dart';
 import 'package:wajed/core/widgets/posts/shared_components/post_action_buttons.dart';
 import 'package:wajed/core/widgets/posts/shared_components/post_description.dart';
 
-class FoundPostCard extends StatelessWidget {
+class LostPostCard extends StatelessWidget {
   final String userName = "Brooklyn Simmons";
   final String avatar =
       'assets/images/6140fad6d9bdd7f9a2e23fb608060567b7c77a06.png';
@@ -39,11 +40,13 @@ class FoundPostCard extends StatelessWidget {
       ),
       child: Column(
         children: [
-          FoundPostHeader(avatar: avatar, userName: userName, timeAgo: timeAgo),
+          LostPostHeader(avatar: avatar, userName: userName, timeAgo: timeAgo),
 
           PostDescription(description: description),
           const SizedBox(height: 12),
           ImagesContainer(images: images, count: count),
+          const SizedBox(height: 8),
+          FinancialRewardContainer(),
           const SizedBox(height: 8),
           PostActionButtons(),
         ],
@@ -51,3 +54,4 @@ class FoundPostCard extends StatelessWidget {
     );
   }
 }
+
