@@ -7,7 +7,7 @@ import 'package:wajed/features/authentication/presentation/views/widgets/custom_
 import 'package:wajed/features/authentication/presentation/views/widgets/custom_text_form_field.dart';
 import 'package:wajed/features/authentication/presentation/views/widgets/facebook_auth_button.dart';
 import 'package:wajed/features/authentication/presentation/views/widgets/google_auth_button.dart';
-import 'package:wajed/features/home/presentation/views/home_view.dart';
+import 'package:wajed/features/main_layout_navigation/presentation/views/main_layout_view.dart';
 import 'package:wajed/features/onboarding/presentation/views/widgets/subtitle_view.dart';
 import 'package:wajed/features/onboarding/presentation/views/widgets/title_view.dart';
 
@@ -66,6 +66,6 @@ class LogInViewBody extends StatelessWidget {
   }
 
   navigateToHomeView({required BuildContext context}) {
-    context.go(HomeView.routeName);
+    context.go(MainLayoutView.routeName);
   }
 }

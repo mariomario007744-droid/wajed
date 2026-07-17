@@ -1,0 +1,28 @@
+import 'package:flutter/material.dart';
+import 'package:wajed/core/widgets/posts/lost_post_card/lost_post_card.dart';
+import 'package:wajed/features/home/presentation/views/widget/home_app_bar.dart';
+
+class Home extends StatelessWidget {
+
+  const Home({super.key});
+
+  @override
+  Widget build(BuildContext context) {
+    return Padding(
+        padding: const EdgeInsets.only(bottom: 16, left: 16, right: 16),
+        child: Column(
+          children: [
+            SizedBox(height: 50, child: HomeAppBar()),
+            Expanded(
+              child: ListView.builder(
+                itemCount: 6,
+                itemBuilder: (context, index) {
+                  return  LostPostCard();
+                },
+              ),
+            ),
+          ],
+        ),
+    );
+  }
+}

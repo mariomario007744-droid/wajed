@@ -10,4 +10,9 @@ abstract class AssetsData {
   static const String contactIcon = 'assets/images/contact-02.svg';
   static const String commentIcon = 'assets/images/comment-01.svg';
   static const String likeIcon = 'assets/images/thumbs-up.svg';
+  static const String addIcon = 'assets/images/add-circle.svg';
+  static const String homeNavBarIcon = 'assets/images/svgviewer-output (2).svg';
+  static const String chatNavBarIcon = 'assets/images/svgviewer-output (1).svg';
+  static const String myPostsNavBarIcon = 'assets/images/svgviewer-output (3).svg';
+  static const String myProfileNavBarIcon = 'assets/images/svgviewer-output (4).svg';
 }

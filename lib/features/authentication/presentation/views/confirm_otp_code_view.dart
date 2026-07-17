@@ -5,7 +5,7 @@ import 'package:wajed/features/authentication/presentation/views/widgets/Custom_
 import 'package:wajed/features/authentication/presentation/views/widgets/custom_app_bar_auth.dart';
 import 'package:wajed/features/authentication/presentation/views/widgets/subtitle_view.dart';
 import 'package:wajed/features/authentication/presentation/views/widgets/title_view.dart';
-import 'package:wajed/features/home/presentation/views/home_view.dart';
+import 'package:wajed/features/main_layout_navigation/presentation/views/main_layout_view.dart';
 
 class ConfirmOTPCodeView extends StatelessWidget {
   const ConfirmOTPCodeView({super.key});
@@ -51,6 +51,6 @@ class ConfirmOTPCodeView extends StatelessWidget {
   }
 
   navigateToHomeView({required BuildContext context}) {
-    context.go(HomeView.routeName);
+    context.go(MainLayoutView.routeName);
   }
 }
