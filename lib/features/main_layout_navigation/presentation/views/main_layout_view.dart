@@ -14,7 +14,7 @@ class MainLayoutView extends StatelessWidget {
         listener: (context, state) {},
         builder: (context, state) {
           return Scaffold(
-            body: state.item?.body,
+            body: SafeArea(child: state.item!.body),
             bottomNavigationBar: CustomNavBar(),
           );
         },

@@ -15,7 +15,6 @@ class HomeAppBar extends StatelessWidget {
           icon: SvgPicture.asset(AssetsData.searchIcon, width: 24, height: 24),
           onPressed: () {},
         ),
-        SizedBox(width: 16,),
         IconButton(
           padding: EdgeInsets.zero,
           icon: SvgPicture.asset(
