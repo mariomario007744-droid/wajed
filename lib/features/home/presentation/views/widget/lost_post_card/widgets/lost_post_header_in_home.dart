@@ -1,8 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:wajed/core/utils/text_style.dart';
+import 'package:wajed/features/home/presentation/views/widget/pop_up_menu_button_in_post.dart';
 
-class LostPostHeader extends StatelessWidget {
-  const LostPostHeader({
+class LostPostHeaderInHome extends StatelessWidget {
+  const LostPostHeaderInHome({
     super.key,
     required this.avatar,
     required this.userName,
@@ -18,11 +19,7 @@ class LostPostHeader extends StatelessWidget {
     return ListTile(
       visualDensity: VisualDensity(vertical: -4),
       contentPadding: EdgeInsets.zero,
-      leading: CircleAvatar(
-        radius: 22,
-        backgroundImage: AssetImage(avatar),
-        backgroundColor: Colors.grey[200],
-      ),
+      leading: CircleAvatar(radius: 22, backgroundImage: AssetImage(avatar)),
       title: Text(userName, style: Styles.fontSize16),
       subtitle: Row(
         children: [
@@ -48,6 +45,7 @@ class LostPostHeader extends StatelessWidget {
           ),
         ],
       ),
+      trailing: PopupMenuButtonInHome(),
     );
   }
 }

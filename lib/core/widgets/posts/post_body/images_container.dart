@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
-import 'package:wajed/core/widgets/posts/shared_components/image_gallery/build_four_images.dart';
-import 'package:wajed/core/widgets/posts/shared_components/image_gallery/build_more_than_four_images.dart';
-import 'package:wajed/core/widgets/posts/shared_components/image_gallery/build_single_image.dart';
-import 'package:wajed/core/widgets/posts/shared_components/image_gallery/build_three_images.dart';
-import 'package:wajed/core/widgets/posts/shared_components/image_gallery/build_two_images.dart';
+import 'package:wajed/core/widgets/posts/post_body/image_gallery/build_four_images.dart';
+import 'package:wajed/core/widgets/posts/post_body/image_gallery/build_more_than_four_images.dart';
+import 'package:wajed/core/widgets/posts/post_body/image_gallery/build_single_image.dart';
+import 'package:wajed/core/widgets/posts/post_body/image_gallery/build_three_images.dart';
+import 'package:wajed/core/widgets/posts/post_body/image_gallery/build_two_images.dart';
 
 class ImagesContainer extends StatelessWidget {
   const ImagesContainer({Key? key, required this.images, required this.count});

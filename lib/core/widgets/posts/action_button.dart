@@ -3,7 +3,7 @@ import 'package:flutter_svg/svg.dart';
 import 'package:wajed/core/utils/text_style.dart';
 
 class ActionButton extends StatelessWidget {
-  ActionButton({
+  const  ActionButton({
     super.key,
     required this.onTap,
     required this.icon,

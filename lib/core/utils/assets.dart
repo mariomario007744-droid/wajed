@@ -15,4 +15,8 @@ abstract class AssetsData {
   static const String chatNavBarIcon = 'assets/images/svgviewer-output (1).svg';
   static const String myPostsNavBarIcon = 'assets/images/svgviewer-output (3).svg';
   static const String myProfileNavBarIcon = 'assets/images/svgviewer-output (4).svg';
+  static const String savrPostIcon = 'assets/images/all-bookmark.svg';
+  static const String deleteIcon = 'assets/images/delete-02.svg';
+  static const String editPostIcon = 'assets/images/pencil-edit-02.svg';
+
 }
