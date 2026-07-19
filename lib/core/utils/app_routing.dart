@@ -1,4 +1,5 @@
 import 'package:go_router/go_router.dart';
+import 'package:wajed/features/add_post/presentation/views/add_post_view.dart';
 import 'package:wajed/features/authentication/presentation/views/add_location_view.dart';
 import 'package:wajed/features/authentication/presentation/views/confirm_otp_code_view.dart';
 import 'package:wajed/features/authentication/presentation/views/create_account_view.dart';
@@ -49,6 +50,10 @@ abstract class AppRoutes {
       GoRoute(
         path: MainLayoutView.routeName,
         builder: (context, state) => MainLayoutView(),
+      ),
+      GoRoute(
+        path: AddPostView.routeName,
+        builder: (context, state) => AddPostView(),
       ),
     ],
   );
