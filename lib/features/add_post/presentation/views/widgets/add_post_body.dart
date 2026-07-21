@@ -1,30 +1,30 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:wajed/core/widgets/custom_button.dart';
 import 'package:wajed/features/add_post/presentation/manager/add_post_type_cubit/add_post_type_cubit.dart';
 import 'package:wajed/features/add_post/presentation/manager/add_post_type_cubit/add_post_type_state.dart';
-import 'package:wajed/features/add_post/presentation/views/widgets/add_image_section.dart';
+import 'package:wajed/features/add_post/presentation/views/widgets/found_something_body.dart';
+import 'package:wajed/features/add_post/presentation/views/widgets/lost_something_body.dart';
 import 'package:wajed/features/add_post/presentation/views/widgets/row_toggle_buttons.dart';
-import 'package:wajed/features/add_post/presentation/views/widgets/title_section.dart';
 
 class AddPostBody extends StatelessWidget {
-  const AddPostBody({super.key});
+  const AddPostBody();
   @override
   Widget build(BuildContext context) {
     return BlocBuilder<AddPostTypeCubit, AddPostTypeState>(
       builder: (context, state) {
         return Expanded(
-          child: ListView(
+          child: Column(
             children: [
               RowToggleButtons(),
-              TitleSection(text: 'Photos'),
-              AddImageSection(),
+              BlocProvider.of<AddPostTypeCubit>(context).lostTypeSelected
+                  ? LostSomethingBody()
+                  : FoundSomethingBody(),
+                  CustomButton(text: 'publish', onPressed: (){})
             ],
           ),
         );
       },
     );
   }
-
-
-
 }
