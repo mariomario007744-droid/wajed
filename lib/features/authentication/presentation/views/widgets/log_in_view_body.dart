@@ -4,12 +4,12 @@ import 'package:icons_plus/icons_plus.dart';
 import 'package:wajed/core/widgets/custom_button.dart';
 import 'package:wajed/features/authentication/presentation/views/widgets/custom_field_label_text.dart';
 import 'package:wajed/features/authentication/presentation/views/widgets/custom_password_form_field.dart';
-import 'package:wajed/features/authentication/presentation/views/widgets/custom_text_form_field.dart';
+import 'package:wajed/core/widgets/custom_text_form_field.dart';
 import 'package:wajed/features/authentication/presentation/views/widgets/facebook_auth_button.dart';
 import 'package:wajed/features/authentication/presentation/views/widgets/google_auth_button.dart';
 import 'package:wajed/features/main_layout_navigation/presentation/views/main_layout_view.dart';
-import 'package:wajed/features/onboarding/presentation/views/widgets/subtitle_view.dart';
-import 'package:wajed/features/onboarding/presentation/views/widgets/title_view.dart';
+import 'package:wajed/core/widgets/widgets/subtitle_view.dart';
+import 'package:wajed/core/widgets/widgets/title_view.dart';
 
 class LogInViewBody extends StatelessWidget {
   LogInViewBody({super.key});

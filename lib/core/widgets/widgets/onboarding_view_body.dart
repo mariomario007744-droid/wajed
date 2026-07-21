@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:wajed/core/widgets/custom_button.dart';
-import 'package:wajed/features/onboarding/presentation/views/widgets/onboarding_view_indicator.dart';
-import 'package:wajed/features/onboarding/presentation/views/widgets/subtitle_view.dart';
-import 'package:wajed/features/onboarding/presentation/views/widgets/title_view.dart';
+import 'package:wajed/core/widgets/widgets/onboarding_view_indicator.dart';
+import 'package:wajed/core/widgets/widgets/subtitle_view.dart';
+import 'package:wajed/core/widgets/widgets/title_view.dart';
 
 class OnboardingViewBody extends StatelessWidget {
   const OnboardingViewBody({required this.activeIndex, required this.title, required this.subtitle, required this.buttonText, required this.onPressed});

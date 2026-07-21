@@ -1,14 +1,12 @@
 import 'package:flutter/material.dart';
-import 'package:go_router/go_router.dart';
 import 'package:wajed/core/widgets/arrow_back_icon.dart';
 import 'package:wajed/core/widgets/custom_button.dart';
-import 'package:wajed/features/authentication/presentation/views/confirm_otp_code_view.dart';
-import 'package:wajed/features/authentication/presentation/views/widgets/custom_search_location_field.dart';
+import 'package:wajed/features/add_post/presentation/views/widgets/custom_search_location_field_in_add_post.dart';
 import 'package:wajed/core/widgets/widgets/subtitle_view.dart';
 import 'package:wajed/core/widgets/widgets/title_view.dart';
 
-class AddLocationViewBody extends StatelessWidget {
-  const AddLocationViewBody({super.key});
+class AddLocationViewBodyInAddPost extends StatelessWidget {
+  const AddLocationViewBodyInAddPost({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -31,7 +29,7 @@ class AddLocationViewBody extends StatelessWidget {
                   text: 'Add the place where you lost your property.',
                 ),
                 const SizedBox(height: 16),
-                const CustomSearchLocationField(),
+                const CustomSearchLocationFieldInAddPost(),
               ],
             ),
           ),
@@ -46,6 +44,6 @@ class AddLocationViewBody extends StatelessWidget {
   }
 
   navigateToConfirmOTPCode(BuildContext context) {
-    context.push(ConfirmOTPCodeView.routeName);
+
   }
 }

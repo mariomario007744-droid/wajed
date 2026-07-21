@@ -13,7 +13,7 @@ class ImagesContainer extends StatelessWidget {
   Widget build(BuildContext context) {
     if (images.isEmpty) return const SizedBox.shrink();
     return Container(
-      height: 300,
+      height: 200,
       clipBehavior: Clip.antiAlias,
       decoration: BoxDecoration(borderRadius: BorderRadius.circular(12)),
       child: buildLayoutByCount(count),

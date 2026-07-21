@@ -8,8 +8,8 @@ import 'package:wajed/features/authentication/presentation/views/log_in_view.dar
 import 'package:wajed/features/authentication/presentation/views/widgets/custom_button_without_background.dart';
 import 'package:wajed/features/authentication/presentation/views/widgets/facebook_auth_button.dart';
 import 'package:wajed/features/authentication/presentation/views/widgets/google_auth_button.dart';
-import 'package:wajed/features/onboarding/presentation/views/widgets/subtitle_view.dart';
-import 'package:wajed/features/onboarding/presentation/views/widgets/title_view.dart';
+import 'package:wajed/core/widgets/widgets/subtitle_view.dart';
+import 'package:wajed/core/widgets/widgets/title_view.dart';
 
 class GetStartedView extends StatelessWidget {
   static const String routeName = '/get_started_view';

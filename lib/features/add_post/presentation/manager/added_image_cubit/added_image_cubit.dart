@@ -10,6 +10,7 @@ class AddedImageCubit extends Cubit<AddedImageState> {
     final List<XFile> images = await picker.pickMultiImage();
     if (images.isNotEmpty) {
       listImages = images.map((file) => file.path).toList();
+      emit(AddedListImagesState(images: listImages));
     }
   }
 

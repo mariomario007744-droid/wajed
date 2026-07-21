@@ -2,9 +2,9 @@ import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
 import 'package:wajed/core/utils/assets.dart';
 import 'package:wajed/features/onboarding/presentation/views/onboarding_third_view.dart';
-import 'package:wajed/features/onboarding/presentation/views/widgets/image_onboarding.dart';
-import 'package:wajed/features/onboarding/presentation/views/widgets/onboarding_view_body.dart';
-import 'package:wajed/features/onboarding/presentation/views/widgets/skip_button_onboarding.dart';
+import 'package:wajed/core/widgets/widgets/image_onboarding.dart';
+import 'package:wajed/core/widgets/widgets/onboarding_view_body.dart';
+import 'package:wajed/core/widgets/widgets/skip_button_onboarding.dart';
 
 class OnboardingSecondView extends StatelessWidget {
   const OnboardingSecondView({super.key});

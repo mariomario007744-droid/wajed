@@ -3,8 +3,8 @@ import 'package:flutter_svg/svg.dart';
 import 'package:wajed/core/utils/assets.dart';
 import 'package:wajed/core/utils/text_style.dart';
 
-class CustomSearchField extends StatelessWidget {
-  const CustomSearchField({super.key});
+class CustomSearchLocationField extends StatelessWidget {
+  const CustomSearchLocationField({super.key});
   @override
   Widget build(BuildContext context) {
     return TextFormField(
