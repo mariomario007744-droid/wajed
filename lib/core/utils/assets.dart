@@ -18,5 +18,6 @@ abstract class AssetsData {
   static const String savrPostIcon = 'assets/images/all-bookmark.svg';
   static const String deleteIcon = 'assets/images/delete-02.svg';
   static const String editPostIcon = 'assets/images/pencil-edit-02.svg';
+  static const String addImageIcon = 'assets/images/image-add-02.svg';
 
 }

@@ -23,3 +23,4 @@ class AddPostView extends StatelessWidget {
     );
   }
 }
+
