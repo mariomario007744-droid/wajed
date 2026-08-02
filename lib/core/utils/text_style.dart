@@ -21,4 +21,9 @@ abstract class Styles {
     fontWeight: FontWeight.w400,
     height: 1.5,
   );
+  static const fontSize18 = TextStyle(
+    fontSize: 18,
+    fontWeight: FontWeight.w600,
+    height: 1.5,
+  );
 }
