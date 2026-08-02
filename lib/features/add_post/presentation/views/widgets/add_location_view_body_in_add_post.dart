@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:wajed/core/widgets/arrow_back_icon.dart';
 import 'package:wajed/core/widgets/custom_button.dart';
-import 'package:wajed/features/add_post/presentation/views/widgets/custom_search_location_field_in_add_post.dart';
+import 'package:wajed/core/widgets/custom_search_location_field.dart';
 import 'package:wajed/core/widgets/widgets/subtitle_view.dart';
 import 'package:wajed/core/widgets/widgets/title_view.dart';
 
@@ -29,7 +29,7 @@ class AddLocationViewBodyInAddPost extends StatelessWidget {
                   text: 'Add the place where you lost your property.',
                 ),
                 const SizedBox(height: 16),
-                const CustomSearchLocationFieldInAddPost(),
+                const CustomSearchLocationField(),
               ],
             ),
           ),

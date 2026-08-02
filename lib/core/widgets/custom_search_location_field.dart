@@ -11,10 +11,7 @@ class CustomSearchLocationField extends StatelessWidget {
       decoration: InputDecoration(
         prefixIcon: Padding(
           padding: const EdgeInsets.all(8.0),
-          child: SvgPicture.asset(
-                AssetsData.mapsSearchIcon,
-                height: 3,
-              ),
+          child: SvgPicture.asset(AssetsData.mapsSearchIcon, height: 3),
         ),
         hint: const Text('Search for a place', style: Styles.fontSize12),
         border: OutlineInputBorder(borderRadius: BorderRadius.circular(16.0)),

@@ -16,10 +16,11 @@ class ListItemNavBar extends StatelessWidget {
       child: SizedBox(
         height: 70,
         child: Row(
-          mainAxisAlignment: MainAxisAlignment.spaceAround,
           children: List.generate(5, (indexGenerator) {
             return indexGenerator == 2
-                ? CustomAddButton()
+                ? SizedBox(
+                  width: MediaQuery.of(context).size.width /5,
+                  child: CustomAddButton())
                 : ItemNavBar(
                     index: indexGenerator > 2
                         ? indexGenerator - 1
