@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
 import 'package:wajed/features/authentication/presentation/views/get_started_view.dart';
+import 'package:wajed/features/my_profile/presentation/views/change_password_view.dart';
 import 'package:wajed/features/my_profile/presentation/views/widgets/my_profile_item.dart';
 import 'package:wajed/features/my_profile/presentation/views/widgets/theme_switch.dart';
 
@@ -36,7 +37,7 @@ class _MyProfileBodyState extends State<MyProfileBody> {
             title: 'Change Password',
             subtitle: 'Update and strengthen account security',
             onTap: () {
-              // navigate to Change Password
+              context.push(ChangePasswordView.routeName);
             },
           ),
           MyProfileItem(
