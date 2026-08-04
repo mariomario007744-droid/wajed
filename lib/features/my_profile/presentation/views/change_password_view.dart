@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:wajed/features/my_profile/presentation/views/widgets/change_password_view_body.dart';
 import 'package:wajed/features/my_profile/presentation/views/widgets/my_profile_items_app_bar.dart';
 
 class ChangePasswordView extends StatelessWidget {
@@ -8,16 +9,15 @@ class ChangePasswordView extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-
-      body:SafeArea(
+      body: SafeArea(
         child: Column(
-          children:[
+          children: [
             MyProfileItemsAppBar(title: 'Change Password'),
-          ]
+            ChangePasswordViewBody(),
+          ],
         ),
-      )
+      ),
     );
   }
 }
-
 

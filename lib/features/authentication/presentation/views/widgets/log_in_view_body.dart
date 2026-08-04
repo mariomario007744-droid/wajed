@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
 import 'package:icons_plus/icons_plus.dart';
 import 'package:wajed/core/widgets/custom_button.dart';
-import 'package:wajed/features/authentication/presentation/views/widgets/custom_field_label_text.dart';
+import 'package:wajed/core/widgets/custom_field_label_text.dart';
 import 'package:wajed/core/widgets/custom_password_form_field.dart';
 import 'package:wajed/core/widgets/custom_text_form_field.dart';
 import 'package:wajed/features/authentication/presentation/views/widgets/facebook_auth_button.dart';
