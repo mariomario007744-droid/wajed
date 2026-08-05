@@ -1,3 +1,12 @@
-sealed class ThemeSwitchState {}
+import 'package:flutter/material.dart';
 
-final class ThemeSwitchInitial extends ThemeSwitchState {}
+abstract class ThemeSwitchState {}
+
+final class ThemeSwitchInitial extends ThemeSwitchState {
+  ThemeSwitchInitial();
+}
+
+final class ChangeThemeState extends ThemeSwitchState {
+  final ThemeMode themeMode;
+  ChangeThemeState({required this.themeMode});
+}
