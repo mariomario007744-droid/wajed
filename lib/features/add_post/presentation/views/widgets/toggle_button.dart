@@ -11,12 +11,12 @@ class ToggleButton extends StatelessWidget {
   Widget build(BuildContext context) {
     return ElevatedButton(
       style: ElevatedButton.styleFrom(
-        backgroundColor:isSelected? kPrimaryColor:ThemeData().scaffoldBackgroundColor,
+        backgroundColor:isSelected? kPrimaryColor:Theme.of(context).colorScheme.surface,
         padding: EdgeInsets.symmetric(vertical: 14, horizontal: 14),
         shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(16)),
       ),
       onPressed: onPressed,
-      child: Text(text,maxLines: 1, style: Styles.fontSize14.copyWith(color:isSelected? Colors.white:Colors.black,overflow: TextOverflow.ellipsis,)),
+      child: Text(text,maxLines: 1, style: Styles.fontSize14.copyWith(color:isSelected? Colors.white:Theme.of(context).colorScheme.onSurface,overflow: TextOverflow.ellipsis,)),
     );
   }
 }
