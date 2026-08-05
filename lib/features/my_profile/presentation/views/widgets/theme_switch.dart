@@ -33,7 +33,6 @@ class ThemeSwitch extends StatelessWidget {
                   style: const TextStyle(
                     fontSize: 20,
                     fontWeight: FontWeight.w600,
-                    color: Colors.black,
                   ),
                 ),
                 SizedBox(height: 4),

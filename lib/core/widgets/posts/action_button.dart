@@ -22,7 +22,7 @@ class ActionButton extends StatelessWidget {
         child: Column(
           mainAxisSize: MainAxisSize.min,
           children: [
-            SvgPicture.asset(icon),
+            SvgPicture.asset(icon,colorFilter: ColorFilter.mode(Theme.of(context).iconTheme.color!, BlendMode.srcIn),),
             const SizedBox(height: 2),
             Text(
               label,

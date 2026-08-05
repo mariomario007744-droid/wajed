@@ -19,7 +19,7 @@ class CustomButtonWithoutBackground extends StatelessWidget {
         children: [
           Text(
             text,
-            style: Styles.fontSize14.copyWith(color: Color(0xFF262626)),
+            style: Styles.fontSize14,
           ),
         ],
       ),

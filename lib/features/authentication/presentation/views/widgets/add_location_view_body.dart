@@ -17,7 +17,7 @@ class AddLocationViewBody extends StatelessWidget {
       child: Column(
         children: [
           Container(
-            color: ThemeData().scaffoldBackgroundColor,
+            color: Theme.of(context).cardColor,
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
