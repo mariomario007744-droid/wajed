@@ -23,7 +23,12 @@ class EditProfileImagePicker extends StatelessWidget {
               children: [
                 ClipRRect(
                   borderRadius: BorderRadius.circular(8),
-                  child: Image.asset(
+                  child:BlocProvider.of<EditImageProfileCubit>(context).file!=null ? Image.file(
+                    BlocProvider.of<EditImageProfileCubit>(context).file!,
+                    width: 80,
+                    height: 80,
+                    fit: BoxFit.cover,
+                  ) : Image.asset(
                     image,
                     width: 80,
                     height: 80,
