@@ -8,6 +8,7 @@ import 'package:wajed/features/authentication/presentation/views/get_started_vie
 import 'package:wajed/features/authentication/presentation/views/log_in_view.dart';
 import 'package:wajed/features/main_layout_navigation/presentation/views/main_layout_view.dart';
 import 'package:wajed/features/my_profile/presentation/views/change_password_view.dart';
+import 'package:wajed/features/my_profile/presentation/views/edit_my_profile_view.dart';
 import 'package:wajed/features/my_profile/presentation/views/saved_posts_view.dart';
 import 'package:wajed/features/onboarding/presentation/views/onboarding_second_view.dart';
 import 'package:wajed/features/onboarding/presentation/views/onboarding_third_view.dart';
@@ -69,6 +70,10 @@ abstract class AppRoutes {
       GoRoute(
         path: SavedPostsView.routeName,
         builder: (context, state) => SavedPostsView(),
+      ),
+      GoRoute(
+        path: EditMyProfileView.routeName,
+        builder: (context, state) => EditMyProfileView(),
       ),
     ],
   );
