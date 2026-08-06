@@ -2,8 +2,8 @@ import 'package:flutter/material.dart';
 import 'package:wajed/const.dart';
 import 'package:wajed/features/main_layout_navigation/presentation/views/widgets/navigation_bar_list.dart';
 
-class CounterNotificationsNavBar extends StatelessWidget {
-  const CounterNotificationsNavBar({super.key, required this.index});
+class CounterNotifications extends StatelessWidget {
+  const CounterNotifications({super.key, required this.index});
 
   final int index;
 

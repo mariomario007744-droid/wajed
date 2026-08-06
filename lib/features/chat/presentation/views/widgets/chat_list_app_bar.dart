@@ -18,7 +18,7 @@ class ChatListAppBar extends StatelessWidget {
         IconButton(
           padding: EdgeInsets.zero,
           icon: SvgPicture.asset(
-            AssetsData.notificationsIcon,
+            AssetsData.searchIcon,
             width: 24,
             height: 24,
           ),
