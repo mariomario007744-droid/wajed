@@ -21,28 +21,29 @@ class ChatListTile extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
 
-    return InkWell(
-      onTap: onTap,
-      child: Padding(
-        padding: const EdgeInsets.symmetric(vertical: 10),
-        child: Row(
-          crossAxisAlignment: CrossAxisAlignment.center,
-          children: [
-            CircleAvatar(
-              radius: 28,
-              backgroundImage: AssetImage(avatarUrl),
-            ),
-            const SizedBox(width: 12),
-            Expanded(
-              child: Column(
+    return SizedBox(
+      height: 70,
+      child: InkWell(
+        onTap: onTap,
+        child: Padding(
+          padding: const EdgeInsets.symmetric(vertical: 10),
+          child: Row(
+            crossAxisAlignment: CrossAxisAlignment.center,
+            children: [
+              CircleAvatar(
+                radius: 28,
+                backgroundImage: AssetImage(avatarUrl),
+              ),
+              const SizedBox(width: 12),
+              Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
                   Text(
                     name,
-                    style: const TextStyle(
+                    style: TextStyle(
                       fontSize: 16,
                       fontWeight: FontWeight.w700,
-                      color: Colors.black,
+                      color: Theme.of(context).textTheme.bodyLarge?.color,
                     ),
                   ),
                   const SizedBox(height: 4),
@@ -53,7 +54,7 @@ class ChatListTile extends StatelessWidget {
                     style: TextStyle(
                       fontSize: 14,
                       color:unreadCount > 0
-                          ? Colors.black87
+                          ?  Theme.of(context).textTheme.bodySmall?.color
                           : Colors.grey.shade500,
                       fontWeight:
                           unreadCount > 0 ? FontWeight.w500 : FontWeight.w400,
@@ -61,26 +62,29 @@ class ChatListTile extends StatelessWidget {
                   ),
                 ],
               ),
-            ),
-            const SizedBox(width: 8),
-            Column(
-              crossAxisAlignment: CrossAxisAlignment.end,
-              children: [
-                Text(
-                  time,
-                  style: TextStyle(
-                    fontSize: 12,
-                    color: Colors.grey.shade500,
-                  ),
+              const Spacer(),
+              Padding(
+                padding: const EdgeInsets.symmetric(horizontal: 8.0),
+                child: Column(
+                  crossAxisAlignment: CrossAxisAlignment.end,
+                  children: [
+                    Text(
+                      time,
+                      style: TextStyle(
+                        fontSize: 12,
+                        color: Colors.grey.shade500,
+                      ),
+                    ),
+                    const SizedBox(height: 6),
+                    if (unreadCount > 0)
+                      CounterNotifications(index: unreadCount)
+                    else
+                      const SizedBox(height: 20),
+                  ],
                 ),
-                const SizedBox(height: 6),
-                if (unreadCount > 0)
-                  CounterNotifications(index: unreadCount)
-                else
-                  const SizedBox(height: 20),
-              ],
-            ),
-          ],
+              ),
+            ],
+          ),
         ),
       ),
     );

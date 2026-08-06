@@ -4,8 +4,8 @@ import 'package:wajed/core/widgets/arrow_back_icon.dart';
 import 'package:wajed/core/widgets/custom_button.dart';
 import 'package:wajed/core/widgets/custom_search_location_field.dart';
 import 'package:wajed/features/authentication/presentation/views/confirm_otp_code_view.dart';
-import 'package:wajed/core/widgets/widgets/subtitle_view.dart';
-import 'package:wajed/core/widgets/widgets/title_view.dart';
+import 'package:wajed/features/authentication/presentation/views/widgets/subtitle_view.dart';
+import 'package:wajed/features/authentication/presentation/views/widgets/title_view.dart';
 
 class AddLocationViewBody extends StatelessWidget {
   const AddLocationViewBody({super.key});

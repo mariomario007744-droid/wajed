@@ -28,7 +28,11 @@ class CustomIconNavBar extends StatelessWidget {
           height: isSelected ? 30 : 24,
         ),
         (NavigationBarList.items[index].badgeCount) > 0
-            ? CounterNotifications(index: index)
+            ? Positioned(
+                right: -10,
+                top: -12,
+                child: CounterNotifications(index: index),
+              )
             : SizedBox(),
       ],
     );

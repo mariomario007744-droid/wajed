@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:go_router/go_router.dart';
+import 'package:wajed/features/chat/presentation/views/chatting_view.dart';
 import 'package:wajed/features/chat/presentation/views/widgets/chat_list_tile.dart';
 
 class ChatListContent extends StatelessWidget {
@@ -17,7 +19,9 @@ class ChatListContent extends StatelessWidget {
             lastMessage: 'Hello, how are you?',
             time: '12:30 PM',
             unreadCount: 2,
-            onTap: () {},
+            onTap: () {
+              context.push(ChattingView.routeName);
+            },
           );
         },
       ),

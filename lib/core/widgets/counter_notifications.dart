@@ -9,21 +9,17 @@ class CounterNotifications extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Positioned(
-      right: -10,
-      top: -12,
-      child: Container(
-        padding: const EdgeInsets.all(4),
-        decoration: const BoxDecoration(
-          color: kPrimaryColor,
-          shape: BoxShape.circle,
-        ),
-        child: Padding(
-          padding: const EdgeInsets.all(2.0),
-          child: Text(
-            '${NavigationBarList.items[index].badgeCount}',
-            style: const TextStyle(color: Colors.white, fontSize: 10),
-          ),
+    return Container(
+      padding: const EdgeInsets.all(4),
+      decoration: const BoxDecoration(
+        color: kPrimaryColor,
+        shape: BoxShape.circle,
+      ),
+      child: Padding(
+        padding: const EdgeInsets.all(2.0),
+        child: Text(
+          '${NavigationBarList.items[index].badgeCount}',
+          style: const TextStyle(color: Colors.white, fontSize: 10),
         ),
       ),
     );
