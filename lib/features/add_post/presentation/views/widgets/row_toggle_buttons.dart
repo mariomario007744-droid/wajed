@@ -3,8 +3,8 @@ import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:wajed/features/add_post/presentation/manager/add_post_type_cubit/add_post_type_cubit.dart';
 import 'package:wajed/core/widgets/toggle_button.dart';
 
-class RowToggleButtons extends StatelessWidget {
-  const RowToggleButtons({super.key});
+class RowToggleButtonsAddPostView extends StatelessWidget {
+  const RowToggleButtonsAddPostView({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -16,15 +16,23 @@ class RowToggleButtons extends StatelessWidget {
           Expanded(
             child: ToggleButton(
               text: 'I lost something',
-              onPressed: () => BlocProvider.of<AddPostTypeCubit>(context).toggleAddPostType(type: true),
-              isSelected: BlocProvider.of<AddPostTypeCubit>(context).lostTypeSelected,
+              onPressed: () => BlocProvider.of<AddPostTypeCubit>(
+                context,
+              ).toggleAddPostType(type: true),
+              isSelected: BlocProvider.of<AddPostTypeCubit>(
+                context,
+              ).lostTypeSelected,
             ),
           ),
           Expanded(
             child: ToggleButton(
               text: 'I found something',
-              onPressed: () => BlocProvider.of<AddPostTypeCubit>(context).toggleAddPostType(type: false),
-              isSelected: !BlocProvider.of<AddPostTypeCubit>(context).lostTypeSelected,
+              onPressed: () => BlocProvider.of<AddPostTypeCubit>(
+                context,
+              ).toggleAddPostType(type: false),
+              isSelected: !BlocProvider.of<AddPostTypeCubit>(
+                context,
+              ).lostTypeSelected,
             ),
           ),
         ],

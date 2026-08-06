@@ -18,13 +18,16 @@ class AddPostBody extends StatelessWidget {
         return Expanded(
           child: Column(
             children: [
-              RowToggleButtons(),
+              RowToggleButtonsAddPostView(),
               BlocProvider.of<AddPostTypeCubit>(context).lostTypeSelected
                   ? LostSomethingBody()
                   : FoundSomethingBody(),
-                  CustomButton(text: 'publish', onPressed: (){
-                    navigateToAddLocationPost(context);
-                  })
+              CustomButton(
+                text: 'publish',
+                onPressed: () {
+                  navigateToAddLocationPost(context);
+                },
+              ),
             ],
           ),
         );
