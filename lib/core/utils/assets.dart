@@ -22,4 +22,6 @@ abstract class AssetsData {
   static const String editPostIcon = 'assets/images/pencil-edit-02.svg';
   static const String addImageIcon = 'assets/images/image-add-02.svg';
   static const String locationIcon = 'assets/images/pin-location-03.svg';
+  static const String iconBlock = 'assets/images/user-block-02.svg';
+
 }

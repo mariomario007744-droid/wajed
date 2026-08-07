@@ -5,10 +5,13 @@ abstract class ThemeApp {
     fontFamily: 'Open Sans',
     brightness: Brightness.light,
   );
-  static ThemeData darkTheme = ThemeData(
-    fontFamily: 'Open Sans',
-    brightness: Brightness.dark,
-  );
+  static ThemeData darkTheme = ThemeData.dark(
+
+  ).copyWith(
+    textTheme: ThemeData.dark().textTheme.apply(
+      fontFamily: 'Open Sans',
+    ),
+    brightness: Brightness.dark,);
 }
 
 

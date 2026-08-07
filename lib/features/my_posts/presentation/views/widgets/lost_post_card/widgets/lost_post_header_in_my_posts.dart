@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:wajed/core/utils/text_style.dart';
-import 'package:wajed/features/my_posts/presentation/views/widgets/pop_up_menu_button_in_post.dart';
+import 'package:wajed/core/widgets/custom_pop_up_menu_button.dart';
+import 'package:wajed/features/my_posts/presentation/views/widgets/custom_popup_menu_items_my_posts.dart';
 
 class LostPostHeaderInMyPosts extends StatelessWidget {
   const LostPostHeaderInMyPosts({
@@ -45,7 +46,10 @@ class LostPostHeaderInMyPosts extends StatelessWidget {
           ),
         ],
       ),
-      trailing: PopupMenuButtonInMyPosts(),
+      trailing: CustomPopupMenuButton(
+        length: CustomPopupMenuItemsMyPosts.getItems(context).length,
+            item: CustomPopupMenuItemsMyPosts.getItems(context),
+      ),
     );
   }
 }

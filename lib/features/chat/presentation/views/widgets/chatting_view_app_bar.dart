@@ -2,6 +2,8 @@ import 'package:flutter/material.dart';
 import 'package:wajed/const.dart';
 import 'package:wajed/core/utils/text_style.dart';
 import 'package:wajed/core/widgets/arrow_back_icon.dart';
+import 'package:wajed/core/widgets/custom_pop_up_menu_button.dart';
+import 'package:wajed/features/chat/presentation/views/widgets/custom_popup_menu_items_chatting_view.dart';
 
 class ChattingViewAppBar extends StatelessWidget {
   const ChattingViewAppBar({
@@ -43,10 +45,7 @@ class ChattingViewAppBar extends StatelessWidget {
               ],
             ),
           ),
-          IconButton(
-            onPressed: onMoreTap,
-            icon: Icon(Icons.more_vert,color: Theme.of(context).colorScheme.primary,),
-          ),
+          CustomPopupMenuButton(length: CustomPopupMenuItemsChattingview.getItems(context).length, item: CustomPopupMenuItemsChattingview.getItems(context)),
         ],
       ),
     );

@@ -12,7 +12,7 @@ class HomeAppBar extends StatelessWidget {
       children: [
         IconButton(
           padding: EdgeInsets.zero,
-          icon: SvgPicture.asset(AssetsData.searchIcon, width: 24, height: 24),
+          icon: SvgPicture.asset(AssetsData.searchIcon,colorFilter: ColorFilter.mode(Theme.of(context).colorScheme.onSurface,BlendMode.srcIn), width: 24, height: 24),
           onPressed: () {},
         ),
         IconButton(
@@ -21,6 +21,7 @@ class HomeAppBar extends StatelessWidget {
             AssetsData.notificationsIcon,
             width: 24,
             height: 24,
+            colorFilter: ColorFilter.mode(Theme.of(context).colorScheme.onSurface,BlendMode.srcIn)
           ),
           onPressed: () {},
         ),
