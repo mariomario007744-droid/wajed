@@ -16,7 +16,7 @@ class ChatListTile extends StatelessWidget {
   final String name;
   final String lastMessage;
   final String time;
-  final int unreadCount;
+  final int unreadCount ;
   final void Function() onTap;
   @override
   Widget build(BuildContext context) {
@@ -74,7 +74,7 @@ class ChatListTile extends StatelessWidget {
                     ),
                   ),
                   const SizedBox(height: 6),
-                  if (unreadCount > 0)
+                  if (unreadCount != 0)
                     CounterNotifications(index: unreadCount)
                   else
                     const SizedBox(height: 20),

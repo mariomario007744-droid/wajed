@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:wajed/const.dart';
-import 'package:wajed/features/main_layout_navigation/presentation/views/widgets/navigation_bar_list.dart';
 
 class CounterNotifications extends StatelessWidget {
   const CounterNotifications({super.key, required this.index});
@@ -18,7 +17,7 @@ class CounterNotifications extends StatelessWidget {
       child: Padding(
         padding: const EdgeInsets.all(2.0),
         child: Text(
-          '${NavigationBarList.items[index].badgeCount}',
+          '${index}',
           style: const TextStyle(color: Colors.white, fontSize: 10),
         ),
       ),

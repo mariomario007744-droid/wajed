@@ -53,7 +53,7 @@ class GetStartedView extends StatelessWidget {
                 ],
               ),
               SizedBox(height: MediaQuery.of(context).size.height * 0.02),
-              SubtitleView(text: 'Or Continue with'),
+              Center(child: SubtitleView(text: 'Or Continue with')),
               SizedBox(height: MediaQuery.of(context).size.height * 0.02),
               Row(
                 mainAxisAlignment: MainAxisAlignment.center,
